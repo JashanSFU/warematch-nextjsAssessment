@@ -34,6 +34,7 @@ WareMatch Listings is a Next.js application designed to help users browse and fi
 │   │   └── FilterPanel.tsx     // UI component for filtering listings (Can be reused)
 │   ├── listings
 │   │   ├── page.tsx            // Server component that fetches listings data (SSR) Revalidation time 90
+│   │   ├── Loading.tsx         // This page added to keep a loading sign till Server renders the listing page. (To avoid unresponsive clicks)
 │   │   └── ListingsClient.tsx  // Client component that handles filtering and UI logic to display the info
 │   └── styles
 │       ├── HomePage.module.css // CSS module for the home page/hero section
