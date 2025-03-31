@@ -1,0 +1,104 @@
+/* .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    position: static;
+  } */
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Increase padding if needed */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+  
+    /* Make it fixed and at top */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  
+    /* Keep it above other content */
+    z-index: 999;
+  }
+  /* BRAND */
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    user-select: none;
+  }
+  
+  /* HAMBURGER: Hidden on larger screens, shown on mobile */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto; /* push brand to left, hamburger to right if you prefer */
+  }
+  
+  /* The three lines in the hamburger icon */
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* TOGGLE CHECKBOX (hidden input) */
+  .toggleCheckbox {
+    display: none;
+  }
+  
+  /* NAV: shown inline on desktop by default */
+  .nav {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Each link */
+  .navLink {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    display: block;
+    padding: 8px 0;
+    user-select: none;
+  }
+  
+  /* MOBILE STYLES */
+  @media (max-width: 768px) {
+    .headerContainer {
+      flex-direction: column;
+    }
+  
+    /* Show hamburger icon on mobile */
+    .hamburger {
+      display: flex;
+      margin-left: 0; /* if you want it next to brand, adjust as needed */
+    }
+  
+    /* Hide nav by default on mobile */
+    .nav {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      top: 60px; /* adjust if brand has different height */
+      left: 0;
+      background-color: #007bff;
+      padding: 10px 0;
+    }
+  
+    /* When checkbox is checked, display the nav */
+    .toggleCheckbox:checked + .hamburger + .nav {
+      display: block;
+    }
+  }
+  

@@ -1,103 +1,113 @@
-import Image from "next/image";
+"use client";
+
+import React from "react";
+import { Box, Button, Container, Typography, Paper } from "@mui/material";
+import Header from "./components/Header";
+import styles from "@/app/styles/HomePage.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <Header />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      {/* Hero Section */}
+      <Box className={styles.heroSection}>
+        <Box className={styles.heroOverlay}>
+          <Typography variant="h3" className={styles.heroTitle}>
+            Find Your Perfect Warehouse
+          </Typography>
+          <Typography variant="h6" className={styles.heroSubtitle}>
+            Explore sublease or 3PL options for your business
+          </Typography>
+          <Button variant="contained" size="large" color="secondary">
+            <Link href="/listing">View Listings</Link>
+          </Button>
+        </Box>
+      </Box>
+
+      {/* About / Intro Section */}
+      <Container sx={{ py: 6 }}>
+        <Typography variant="h4" textAlign="center" gutterBottom>
+          The One-Stop Warehouse Solution
+        </Typography>
+        <Typography
+          variant="body1"
+          textAlign="center"
+          sx={{ mb: 4, maxWidth: 800, mx: "auto" }}
+        >
+          Whether you’re searching for sublease warehouses or a 3PL provider, we
+          bring together all available listings in one convenient platform.
+          Compare spaces by location, price, and amenities—and select the best
+          match for your storage and logistics needs.
+        </Typography>
+
+        {/* Replace Grid/Grid2 with a Box using CSS grid */}
+        <Box
+          sx={{
+            display: "grid",
+            // 1 column on small screens, 3 columns on md+ screens
+            gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" },
+            gap: 4,
+          }}
+        >
+          <Paper
+            elevation={0}
+            sx={{ p: 3, textAlign: "center", height: "100%" }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
+              Huge Inventory
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              We partner with top landlords and logistics providers to offer a
+              wide range of warehouse spaces across multiple cities and
+              provinces.
+            </Typography>
+          </Paper>
+
+          <Paper
+            elevation={0}
+            sx={{ p: 3, textAlign: "center", height: "100%" }}
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
+              Simplified Search
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Filter listings by sublease vs. 3PL, available square footage, or
+              price, ensuring you find the perfect match for your needs.
+            </Typography>
+          </Paper>
+
+          <Paper
+            elevation={0}
+            sx={{ p: 3, textAlign: "center", height: "100%" }}
+          >
+            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
+              Seamless Process
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Connect directly with warehouse owners and 3PL operators to
+              finalize contracts quickly and efficiently.
+            </Typography>
+          </Paper>
+        </Box>
+      </Container>
+
+      {/* CTA or Additional Info Section */}
+      <Box className={styles.ctaSection}>
+        <Container>
+          <Typography variant="h4" className={styles.ctaHeading}>
+            Ready to Optimize Your Supply Chain?
+          </Typography>
+          <Typography variant="body1" className={styles.ctaText}>
+            Discover how our platform can streamline your logistics, reduce
+            overhead costs, and keep your operations moving efficiently.
+          </Typography>
+          <Button variant="contained" size="large">
+            Explore Listings
+          </Button>
+        </Container>
+      </Box>
+    </>
   );
 }

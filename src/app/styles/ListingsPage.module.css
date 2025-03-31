@@ -1,0 +1,24 @@
+.pageContainer {
+    padding: 2rem 1rem;
+  }
+  
+  .pageTitle {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .listingsGrid {
+    margin-top: 2rem;
+  }
+  
+  .loadingWrapper,
+  .alertWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  .filterCard{
+    z-index: 10000;
+  }
+  
