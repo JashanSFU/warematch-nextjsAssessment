@@ -128,6 +128,13 @@ WareMatch Listings is a Next.js application designed to help users browse and fi
 
 To build for production:
 
+add these lines to a new file .env.local file and place .env.local to the root folder
+
+NEXT_PUBLIC_API_BASE_URL=http://54.242.149.77:8000
+NEXT_PUBLIC_API_LOGIN_EMAIL=tester@gmail.com
+NEXT_PUBLIC_API_LOGIN_PASSWORD=Tester@1234
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
 ```bash
 npm run build
 npm run start
