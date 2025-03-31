@@ -48,10 +48,10 @@
   
   /* Example style for the CTA paragraph */
   .ctaText {
-    max-width: 600px;
     margin: 0 auto 2rem;
     font-size: 1rem;
     line-height: 1.5;
     color: #555;
+    text-align: center;
   }
   

@@ -21,7 +21,6 @@ export async function GET() {
     }
 
     const listings = await response.json();
-    console.log(listings);
     return NextResponse.json(listings);
   } catch (error) {
     console.error('API Route Error:', error);

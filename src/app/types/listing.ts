@@ -30,7 +30,7 @@ interface Image {
     storage_conditions: string[];
     amenities: string[];
     services: string[];
-    sublease_pricing_tiers: any[]; // Can be further specified if data available
+    sublease_pricing_tiers: unknown[]; // Can be further specified if data available
     contacts: Contact[];
     floor_plan: string | null;
     display_image: string | null;

@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <>
       <Header />
-
       {/* Hero Section */}
       <Box className={styles.heroSection}>
         <Box className={styles.heroOverlay}>
@@ -20,9 +19,11 @@ export default function Home() {
           <Typography variant="h6" className={styles.heroSubtitle}>
             Explore sublease or 3PL options for your business
           </Typography>
-          <Button variant="contained" size="large" color="secondary">
-            <Link href="/listing">View Listings</Link>
-          </Button>
+          <Link href="/listing">
+            <Button variant="contained" size="large" color="secondary">
+              View Listings
+            </Button>
+          </Link>
         </Box>
       </Box>
 
@@ -69,7 +70,10 @@ export default function Home() {
             elevation={0}
             sx={{ p: 3, textAlign: "center", height: "100%" }}
           >
-            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: 600, mb: 2, textAlign: "center" }}
+            >
               Simplified Search
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -99,7 +103,11 @@ export default function Home() {
           <Typography variant="h4" className={styles.ctaHeading}>
             Ready to Optimize Your Supply Chain?
           </Typography>
-          <Typography variant="body1" className={styles.ctaText}>
+          <Typography
+            variant="body1"
+            className={styles.ctaText}
+            sx={{ fontWeight: 600, mb: 2, textAlign: "center" }}
+          >
             Discover how our platform can streamline your logistics, reduce
             overhead costs, and keep your operations moving efficiently.
           </Typography>

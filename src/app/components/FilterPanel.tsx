@@ -28,7 +28,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({ filters, onChange }) => {
   } = filters;
 
   // Helper to unify setting partial filter updates
-  const handleChange = (field: keyof ListingFilterState, value: any) => {
+  const handleChange = (field: keyof ListingFilterState, value: unknown) => {
     onChange({ [field]: value });
   };
 
