@@ -185,7 +185,7 @@ export default async function ListingsPage() {
   //    This fetch runs on the server at build time or request time.
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/listing`, {
     // if you want no caching, e.g. get fresh data each time:
-    cache: "no-store",
+    next: { revalidate: 90 },
   });
 
   if (!res.ok) {
